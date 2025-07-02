@@ -18,7 +18,6 @@ export default function Books() {
     try {
       const res = await api.get('/books');
       setBooks(res.data);
-      console.log('✅ Books fetched:', res.data);
     } catch (err) {
       toast.error('Failed to fetch books');
     }
@@ -64,7 +63,12 @@ export default function Books() {
   };
 
   const handleEdit = (book) => {
-    setForm(book);
+    setForm({
+      title: book.title,
+      author: book.author,
+      genre: book.genre,
+      publishedYear: book.publishedYear,
+    });
     setEditId(book.id);
   };
 
@@ -95,31 +99,31 @@ export default function Books() {
             <input
               placeholder="Title"
               value={form.title}
-              onChange={(e) => setForm({ ...form, title: e.target.value })}
-              className="p-3 border rounded-lg"
+              onChange={(e) => setForm({ ...form, title: e.target.value.trimStart() })}
+              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <input
               placeholder="Author"
               value={form.author}
-              onChange={(e) => setForm({ ...form, author: e.target.value })}
-              className="p-3 border rounded-lg"
+              onChange={(e) => setForm({ ...form, author: e.target.value.trimStart() })}
+              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <input
               placeholder="Genre"
               value={form.genre}
-              onChange={(e) => setForm({ ...form, genre: e.target.value })}
-              className="p-3 border rounded-lg"
+              onChange={(e) => setForm({ ...form, genre: e.target.value.trimStart() })}
+              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <input
               placeholder="Published Year"
               type="number"
               value={form.publishedYear}
               onChange={(e) => setForm({ ...form, publishedYear: e.target.value })}
-              className="p-3 border rounded-lg"
+              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <button
               type="submit"
-              className="col-span-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg font-semibold"
+              className="col-span-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg font-semibold transition"
             >
               {editId ? '✏️ Update Book' : '➕ Add Book'}
             </button>
@@ -137,14 +141,12 @@ export default function Books() {
                 {books.map((book) => (
                   <div
                     key={book.id}
-                    className="min-w-[280px] max-w-xs bg-gray-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm"
+                    className="min-w-[280px] max-w-xs bg-gray-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition"
                   >
                     <h4 className="text-xl font-bold text-blue-700">{book.title}</h4>
                     <p className="text-gray-700">Author: {book.author}</p>
                     <p className="text-gray-700">Genre: {book.genre}</p>
                     <p className="text-gray-700">Published: {book.publishedYear}</p>
-
-                    {/* 🔒 Show buttons only if user is creator */}
                     {book.userId === currentUser?.userId && (
                       <div className="flex gap-3 mt-3">
                         <button
