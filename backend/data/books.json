@@ -1,5 +1,23 @@
 [
   {
+    "id": "55c03cc9-9191-4ee4-8fb5-9013c64b53f8",
+    "title": "The Almighty Revised",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "publishedYear": 1988,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "89ab7251-b25f-420d-86af-e73055a018d5",
+    "title": "5 AM",
+    "author": "Kb. Raoute",
+    "genre": "life",
+    "publishedYear": "2003",
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+
+  
+  {
     "id": "e2c15e7f-1c6a-4dcf-88f9-7c57e5a649a1",
     "title": "Atomic Habits",
     "author": "James Clear",
