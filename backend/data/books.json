@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e2c15e7f-1c6a-4dcf-88f9-7c57e5a649a1",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Self-help",
+    "publishedYear": 2018,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "ee96f9d3-ec9b-406c-9c5a-841ab13d2282",
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "genre": "Spirituality",
+    "publishedYear": 1997,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "f870f1f7-845c-4cd2-b3f1-7ac15b68f92c",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "genre": "Self-help",
+    "publishedYear": 2016,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "b1d59f6a-3805-4c96-859a-f5a51a1bdbf4",
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "genre": "Productivity",
+    "publishedYear": 2016,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "abf4f681-b010-4ae1-b038-4e81e2b3faae",
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "genre": "Psychology",
+    "publishedYear": 2011,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "d3efbf27-2c88-4e2a-925e-e7b3a442a1e9",
+    "title": "Man's Search for Meaning",
+    "author": "Viktor E. Frankl",
+    "genre": "Philosophy",
+    "publishedYear": 1946,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "0a74ed59-3a12-4b96-9e14-2465c44c2462",
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert T. Kiyosaki",
+    "genre": "Finance",
+    "publishedYear": 1997,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "517f57b2-f531-4897-86a3-9b8a3b96e1b4",
+    "title": "Can't Hurt Me",
+    "author": "David Goggins",
+    "genre": "Motivational",
+    "publishedYear": 2018,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "2d7f1a5e-cb7e-4a4a-9bb0-fc2e90e6db3d",
+    "title": "Ikigai",
+    "author": "Francesc Miralles",
+    "genre": "Lifestyle",
+    "publishedYear": 2016,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  },
+  {
+    "id": "a0cdb56c-88f8-4a4c-aad3-4b0e07de2e87",
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "genre": "Finance",
+    "publishedYear": 2020,
+    "userId": "0a4eb10a-4d59-45b3-84e3-22939e70f79f"
+  }
+]

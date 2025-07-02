@@ -1,0 +1,17 @@
+[
+  {
+    "id": "0a4eb10a-4d59-45b3-84e3-22939e70f79f",
+    "email": "sarthak@example.com",
+    "password": "password123"
+  },
+  {
+    "id": "84f1bb18-aafa-45b8-9c20-f29d532cff02",
+    "email": "devahuja@gmail.com",
+    "password": "dev123"
+  },
+  {
+    "id": "b224c4b0-5950-443e-a7c2-6be10ada490a",
+    "email": "sarthakdubey2022@vitbhopal.ac.in",
+    "password": "sarthak123"
+  }
+]
