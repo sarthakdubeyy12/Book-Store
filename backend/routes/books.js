@@ -1,10 +1,12 @@
 const express = require('express');
+const path = require('path');
 const auth = require('../middleware/authMiddleware');
 const { readFile, writeFile } = require('../utils/fileHandler');
 const { v4: uuid } = require('uuid');
 const router = express.Router();
 
-const BOOKS_FILE = './data/books.json';
+// ✅ Correctly resolve absolute path to books.json
+const BOOKS_FILE = path.join(__dirname, '../data/books.json');
 
 router.use(auth);
 
@@ -13,7 +15,6 @@ router.get('/', async (req, res) => {
   const { genre, author, title, page = 1, limit = 10 } = req.query;
   let books = await readFile(BOOKS_FILE);
 
-  // Optional filtering
   if (genre) {
     books = books.filter(b => b.genre.toLowerCase().includes(genre.toLowerCase()));
   }
@@ -24,7 +25,6 @@ router.get('/', async (req, res) => {
     books = books.filter(b => b.title.toLowerCase().includes(title.toLowerCase()));
   }
 
-  // Pagination
   const start = (parseInt(page) - 1) * parseInt(limit);
   const paginated = books.slice(start, start + parseInt(limit));
 
@@ -59,7 +59,6 @@ router.post('/', async (req, res) => {
 
   books.push(newBook);
   await writeFile(BOOKS_FILE, books);
-
   res.status(201).json(newBook);
 });
 
