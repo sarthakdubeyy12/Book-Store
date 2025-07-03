@@ -1,8 +1,6 @@
 # 📘 Bookstore REST API (Node.js + Express + JWT + File Storage)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 
-# 📘 Bookstore REST API (Node.js + Express + JWT + File Storage)
-
 A RESTful API for a simple Bookstore application built using **Node.js**, **Express**, **JWT authentication**, and **file-based persistence** (JSON).  
 Supports secure CRUD operations on books and user management.
 
