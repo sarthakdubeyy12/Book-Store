@@ -16,7 +16,7 @@ export default function Books() {
 
   const fetchBooks = async () => {
     try {
-      const res = await api.get('/books');
+      const res = await api.get('/books?limit=200'); // ✅ Fetch all books
       setBooks(res.data);
     } catch (err) {
       toast.error('Failed to fetch books');
