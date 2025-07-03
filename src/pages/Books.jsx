@@ -15,14 +15,14 @@ export default function Books() {
   const currentUser = token ? jwtDecode(token) : null;
 
   const fetchBooks = async () => {
-    try {
-      const res = await api.get('/books?limit=200'); // ✅ Fetch all books
-      setBooks(res.data);
-    } catch (err) {
-      toast.error('Failed to fetch books');
-    }
-  };
-
+  try {
+    const res = await api.get('/books');
+    console.log("📦 Books received from backend:", res.data); // ✅ Add this line
+    setBooks(res.data);
+  } catch (err) {
+    toast.error('Failed to fetch books');
+  }
+};
   useEffect(() => {
     fetchBooks();
   }, []);

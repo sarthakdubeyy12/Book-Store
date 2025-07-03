@@ -1,3 +1,4 @@
+// backend/app.js
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/auth');
@@ -14,7 +15,6 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like curl or Postman)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -32,18 +32,15 @@ app.use('/auth', authRoutes);
 app.use('/books', bookRoutes);
 
 // 404 Not Found
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// General Error Handler
+// Error Handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: err.message || 'Server Error' });
 });
 
-// Start Server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// ✅ Export app (no listen)
+module.exports = app;

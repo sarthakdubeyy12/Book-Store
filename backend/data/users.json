@@ -13,5 +13,10 @@
     "id": "b224c4b0-5950-443e-a7c2-6be10ada490a",
     "email": "sarthakdubey2022@vitbhopal.ac.in",
     "password": "sarthak123"
+  },
+  {
+    "id": "89196a53-aafb-4ff4-949e-bc575273fb97",
+    "email": "test@example.com",
+    "password": "password123"
   }
 ]
