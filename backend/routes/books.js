@@ -12,7 +12,7 @@ router.use(auth);
 
 // GET /books?genre=&author=&title=&page=&limit=
 router.get('/', async (req, res) => {
-  const { genre, author, title, page = 1, limit = 10 } = req.query;
+  const { genre, author, title, page = 1, limit = 200 } = req.query;
   let books = await readFile(BOOKS_FILE);
 
   if (genre) {
