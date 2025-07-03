@@ -7,7 +7,7 @@ const logger = require('./middleware/logger');
 
 const app = express();
 
-// ✅ Allow both local and deployed frontend origins
+//both local and deployed frontend
 const allowedOrigins = [
   'http://localhost:5173',
   'https://bookstore-frontend-cini.onrender.com',
@@ -36,11 +36,8 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// Error Handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: err.message || 'Server Error' });
 });
-
-// ✅ Export app (no listen)
 module.exports = app;

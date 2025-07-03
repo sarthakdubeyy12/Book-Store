@@ -5,7 +5,6 @@ const { readFile, writeFile } = require('../utils/fileHandler');
 const { v4: uuid } = require('uuid');
 const router = express.Router();
 
-// ✅ Correctly resolve absolute path to books.json
 const BOOKS_FILE = path.join(__dirname, '../data/books.json');
 
 router.use(auth);
