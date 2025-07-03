@@ -137,9 +137,9 @@ Authorization: Bearer token
 
 ```bash
 git clone https://github.com/sarthakdubeyy12/Book-Store
-cd Book-Store/backend
+cd bookstore/backend
 npm install
-node app.js
+node server.js
 ```
 
 Server starts on `http://localhost:3000`
